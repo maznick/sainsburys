@@ -1,0 +1,11 @@
+{
+  "require": {
+    "shark/simple_html_dom": "dev-master",
+    "phpunit/phpunit": "5.6.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Model\\": "src\\"
+    }
+  }
+}
