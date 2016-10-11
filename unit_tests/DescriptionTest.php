@@ -11,7 +11,7 @@ class DescriptionTest extends PHPUnit_Framework_TestCase
         $html_content = @file_get_html(__DIR__ . "/../cache/sainsburys-apricot-ripe---ready-320g.html");
         $description = new \Model\Description($html_content);
         $expected_description = "Buy Sainsbury's Apricot Ripe & Ready x5 online from Sainsbury's, the same great quality, freshness and choice you'd find in store. Choose from 1 hour delivery slots and collect Nectar points.";
-        $this->assertEquals($expected_description, $description->get());
+        $this->assertEquals($expected_description, html_entity_decode($description->get(), ENT_QUOTES));
     }
 
 }
