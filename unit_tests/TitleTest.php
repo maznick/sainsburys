@@ -10,7 +10,7 @@ class TitleTest extends PHPUnit_Framework_TestCase
     {
         $html_content = @file_get_html(__DIR__ . "/../cache/sainsburys-apricot-ripe---ready-320g.html");
         $title = new \Model\Title($html_content);
-        $this->assertEquals("Sainsbury's Apricot Ripe &amp; Ready x5", $title->get());
+        $this->assertEquals("Sainsbury's Apricot Ripe & Ready x5", $title->get());
     }
 
 }
